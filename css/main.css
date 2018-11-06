@@ -73,11 +73,14 @@ ul > li.nav-item > a.nav-link {
     width: 100%;
 }
 
-.navbar-light > .navbar-nav > .nav-item > a.nav-link {
+.navbar-light > .navbar-nav > .nav-item > .nav-link {
     /* width: 100%;
     margin: auto;
     position: relative;
     display: block; */
+    z-index: 100;
+    position: relative;
+    background: #272b23;
 }
 
 .nav.nav-tabs {
@@ -86,4 +89,18 @@ ul > li.nav-item > a.nav-link {
 }
 .nav.nav-tabs > .nav-item > .nav-link:hover {
     border : 1px solid transparent;
+}
+.nav-item.active::before {
+    width: 20%;
+    height: 22px;
+    content: "" ;
+    background:#272b23;
+    position: absolute;
+    top: 26px;
+    left: 20px;
+    border-left: 2px solid #14f217;
+    border-right: 2px solid #14f217;
+    border-top: 2px solid #14f217;
+    z-index: 500;
+
 }
